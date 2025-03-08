@@ -20,7 +20,7 @@ const TaskTable: React.FC<TaskTableProps> = ({ tasks, isLoading, onUpdate, onDel
             title: 'Action',
             key: 'action',
             render: (_: unknown, record: Task) => (
-                <div className="flex space-x-2">
+                <div className="flex gap-x-5">
                     <Select defaultValue={record.status} onChange={(value) => onUpdate(record.id, value)}>
                         <Option value="To Do">To Do</Option>
                         <Option value="In Progress">In Progress</Option>
